@@ -34,6 +34,7 @@ async function deleteUser(req, res) {
       res.send('Usuário não encontrado');
     }
     res.send(result);
+    return result;
   } catch (error) {
     res.send(error);
   }
