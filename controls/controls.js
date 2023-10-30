@@ -19,6 +19,7 @@ async function addUser(req, res) {
     };
     const user = new User(userData);
     const savedUser = await user.save();
+    res.send(userData);
     return savedUser;
   } catch (error) {
     res.send(userData);
