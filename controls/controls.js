@@ -5,6 +5,7 @@ async function getUsers(req, res) {
     const users = await User.find();
     res.send(users);
     return users;
+    console.log(users);
   } catch (error) {
     res.send(error);
   }
