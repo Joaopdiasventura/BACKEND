@@ -22,7 +22,7 @@ async function addUser(req, res) {
     res.send(userData);
     return savedUser;
   } catch (error) {
-    res.send(userData);
+    res.send(error + userData);
   }
 }
 
