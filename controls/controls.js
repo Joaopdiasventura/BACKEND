@@ -3,8 +3,8 @@ import User from "../models/User.js";
 async function getUsers(req, res) {
   try {
     const users = await User.find();
-    return users;
     res.send(users);
+    return users;
     console.log(users);
   } catch (error) {
     res.send(error);
