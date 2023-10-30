@@ -5,6 +5,6 @@ const routes = Router();
 
 routes.get("/users", getUsers);
 routes.post("/users", addUser);
-routes.delete("/users/:_id", deleteUser)
+routes.post("/users/:_id", deleteUser)
 
 export default routes;
