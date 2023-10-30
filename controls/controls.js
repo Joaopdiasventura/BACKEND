@@ -19,7 +19,6 @@ async function addUser(req, res) {
     };
     const user = new User(userData);
     const savedUser = await user.save();
-    res.send(savedUser);
     return savedUser;
   } catch (error) {
     res.send(error);
@@ -33,7 +32,6 @@ async function deleteUser(req, res) {
     if (!result) {
       res.send('Usuário não encontrado');
     }
-    res.send(result);
     return result;
   } catch (error) {
     res.send(error);
