@@ -4,6 +4,7 @@ async function getUsers(req, res) {
   try {
     const users = await User.find();
     res.send(users);
+    return users;
   } catch (error) {
     res.send(error);
   }
@@ -18,6 +19,7 @@ async function addUser(req, res) {
     const user = new User(userData);
     const savedUser = await user.save();
     res.send(savedUser);
+    return savedUser;
   } catch (error) {
     res.send(error);
   }
